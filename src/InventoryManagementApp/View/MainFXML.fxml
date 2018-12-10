@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="500.0" maxWidth="1200.0" minHeight="500.0" minWidth="1200.0" prefHeight="500.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="softwareoneproject.View.MainController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="300.0" layoutX="69.0" layoutY="100.0" opacity="1.0" smooth="true" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="10.0" strokeType="OUTSIDE" strokeWidth="1.0" width="500.0">
+      <fill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x3" />
+      </fill>
+      <stroke>
+        <Color blue="0.125" green="0.125" red="0.125" fx:id="x4" />
+      </stroke>
+    </Rectangle>
+    <TableView fx:id="partsViewTable" blendMode="SRC_OVER" layoutX="84.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="461.0">
+      <columns>
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Part ID" fx:id="partIDColumn" />
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Part Name" fx:id="partNameColumn" />
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Inventory Level" fx:id="partInStockColumn" />
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Price/Cost per Unit" fx:id="partPriceColumn" />
+      </columns>
+    </TableView>
+    <Label layoutX="84.0" layoutY="116.0" text="Parts">
+      <font>
+        <Font name="Segoe UI Light" size="35.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Button layoutX="330.0" layoutY="133.0" mnemonicParsing="false" onAction="#searchPartButtonAction" text="Search">
+      <font>
+        <Font size="15.0" fx:id="x2" />
+      </font>
+    </Button>
+    <TextField id="searchText" fx:id="searchPartTextField" layoutX="423.0" layoutY="135.0" prefWidth="120.0" />
+    <Label layoutX="23.0" layoutY="20.0" text="Inventory Management System">
+      <font>
+        <Font name="Segoe UI Light" size="40.0" />
+      </font>
+    </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x3" height="300.0" layoutX="640.0" layoutY="100.0" opacity="1.0" smooth="true" stroke="$x4" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="10.0" strokeType="OUTSIDE" strokeWidth="1.0" width="500.0" />
+    <TableView fx:id="prodViewTable" blendMode="SRC_OVER" layoutX="655.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="460.0">
+      <columns>
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Product ID" fx:id="prodIDColumn" />
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Product Name" fx:id="prodNameColumn" />
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="Inventory Level" fx:id="prodInStockColumn" />
+        <TableColumn maxWidth="115.0" minWidth="115.0" prefWidth="126.0" text="Price per Unit" fx:id="prodPriceColumn" />
+      </columns>
+    </TableView>
+    <Label font="$x1" layoutX="655.0" layoutY="116.0" text="Products" />
+    <Button font="$x2" layoutX="904.0" layoutY="133.0" mnemonicParsing="false" onAction="#searchProductButtonAction" text="Search" />
+    <TextField fx:id="searchProdTextField" layoutX="995.0" layoutY="135.0" prefWidth="120.0" />
+    <Button font="$x2" layoutX="280.0" layoutY="350.0" mnemonicParsing="false" onAction="#addPartButtonAction" prefWidth="75.0" text="Add" />
+    <Button font="$x2" layoutX="375.0" layoutY="350.0" mnemonicParsing="false" onAction="#deletePartButtonAction" prefWidth="75.0" text="Delete" />
+    <Button font="$x2" layoutX="470.0" layoutY="350.0" mnemonicParsing="false" onAction="#modifyPartButtonAction" prefWidth="75.0" text="Modify" />
+    <Button font="$x2" layoutX="850.0" layoutY="350.0" mnemonicParsing="false" onAction="#addProductButtonAction" prefWidth="75.0" text="Add" />
+    <Button font="$x2" layoutX="1040.0" layoutY="350.0" mnemonicParsing="false" onAction="#modifyProductButtonAction" prefWidth="75.0" text="Modify" />
+    <Button font="$x2" layoutX="945.0" layoutY="350.0" mnemonicParsing="false" onAction="#deleteProductButtonAction" prefWidth="75.0" text="Delete" />
+    <Button layoutX="1070.0" layoutY="442.0" mnemonicParsing="false" onAction="#exitButtonAction" text="Exit">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>

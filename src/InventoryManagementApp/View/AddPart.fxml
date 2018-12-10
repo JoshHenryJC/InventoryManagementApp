@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="softwareoneproject.View.AddPartController">
+  <children>
+    <Label layoutX="14.0" layoutY="21.0" text="Add Part">
+      <font>
+        <Font name="Segoe UI Light" size="35.0" />
+      </font>
+    </Label>
+    <RadioButton id="inhouseRadioButton" fx:id="inhouseButton" layoutX="180.0" layoutY="37.0" mnemonicParsing="false" onAction="#radioButtonAction" text="In-House">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </RadioButton>
+    <RadioButton id="outsourcedRadioButton" fx:id="outsourcedButton" font="$x1" layoutX="281.0" layoutY="37.0" mnemonicParsing="false" onAction="#radioButtonAction" selected="false" text="Outsourced" textAlignment="LEFT" />
+    <Label layoutX="25.0" layoutY="100.0" text="ID">
+      <font>
+        <Font name="Segoe UI Light" size="30.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label font="$x2" layoutX="25.0" layoutY="160.0" text="Name" />
+    <Label font="$x2" layoutX="25.0" layoutY="220.0" text="Inv" />
+    <Label font="$x2" layoutX="25.0" layoutY="280.0" text="Price/Cost" />
+    <Label font="$x2" layoutX="25.0" layoutY="340.0" text="Max" />
+    <Label id="companyMachineLabel" fx:id="partCorMLabel" font="$x2" layoutX="25.0" layoutY="400.0" text="Company Name" />
+    <TextField id="partNameField" fx:id="partNameText" disable="false" editable="true" layoutX="281.0" layoutY="160.0" prefHeight="40.0" prefWidth="130.0" text="" />
+    <TextField id="partInStockField" fx:id="partInStockText" disable="false" editable="true" layoutX="281.0" layoutY="220.0" prefHeight="40.0" prefWidth="130.0" text="" />
+    <TextField id="partPriceField" fx:id="partPriceText" disable="false" editable="true" layoutX="281.0" layoutY="280.0" prefHeight="40.0" prefWidth="130.0" text="" />
+    <TextField id="partMaxField" fx:id="partMaxText" disable="false" editable="true" layoutX="128.0" layoutY="340.0" prefHeight="40.0" prefWidth="130.0" text="" />
+    <TextField id="companyMachineField" fx:id="partCorMText" disable="false" editable="true" layoutX="281.0" layoutY="400.0" prefHeight="40.0" prefWidth="130.0" text="" />
+    <Label font="$x2" layoutX="281.0" layoutY="340.0" text="Min" />
+    <TextField id="PartMinField" fx:id="partMinText" disable="false" editable="true" layoutX="356.0" layoutY="340.0" prefHeight="40.0" prefWidth="130.0" text="" />
+    <Button fx:id="saveButton" disable="true" font="$x2" layoutX="197.0" layoutY="483.0" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="53.0" prefWidth="135.0" text="Save" />
+    <Button font="$x2" layoutX="356.0" layoutY="483.0" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel" />
+    <TextField id="partIDField" fx:id="partIDText" disable="true" editable="true" layoutX="281.0" layoutY="100.0" prefHeight="40.0" prefWidth="130.0" promptText="" text="" />
+  </children>
+</AnchorPane>
